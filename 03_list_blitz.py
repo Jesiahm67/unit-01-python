@@ -41,16 +41,26 @@ Task 6: Delete Element at a Specific Index
 Delete an element at a specific index. Print the updated 
 list.
 """
-
+my_sixth_list = ["red", "orange", "yellow"]
+del my_sixth_list[0]
+print(my_sixth_list)
 
 """
 Task 7: Slicing lists
 Create a new variable equal to the first 2 items of your list
 Then print out the new variable
 """
+my_seventh_list = ["a", "b", "c"]
+new_variable= my_seventh_list[0:2]
+print(new_variable)
 
 """
 Task 8: Extend a List
 Extend the list with the elements of another list. Print 
 the updated list.
+
 """
+list_1=["a", "b"]
+list_2=["c", "d"]
+my_eighth_list = list_1 + list_2
+print(my_eighth_list)
