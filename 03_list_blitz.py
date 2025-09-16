@@ -56,6 +56,7 @@ Then print out the new variable
 """
 my_seventh_list = ["a", "b", "c"]#create variable for seventh list 
 new_variable= my_seventh_list[0:2]#create new variable to copy the first 2 values in the old variable
+print(my_seventh_list)
 print(new_variable)
 
 """
@@ -67,4 +68,6 @@ the updated list.
 list_1=["a", "b"]#create 2 variables for the eigth list
 list_2=["c", "d"]
 my_eighth_list = list_1 + list_2#create variable for eigth list to combine both recent lists
+print(list_1)
+print(list_2)
 print(my_eighth_list)
