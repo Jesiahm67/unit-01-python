@@ -44,6 +44,23 @@ The shipping cost is $5 per kilogram for Zone A and $7 per kilogram for Zone B.
 If the order weight is less than 0 kg, return an error message.
 '''
 
+weight=int(input("What is the weight: "))#create variable for weight integer and zone string
+zone=str(input("Which zone are you taking: "))
+A=5#create varable for zone A and zone B
+B=7
+
+if weight <= 0:#first create error if weight is less than or equal to zero
+    print("Error")
+
+if zone == "A" or zone == "zone A":#then create if statements for zone a and zone B
+    weight * A
+    print(weight * A)
+elif zone == "B" or zone == "zone B":
+    weight * B
+    print(weight * B)
+else:#create else statement if user does not pick zone A or B
+    print("pick a zone")
+
 '''
 Exercise 6:
 Determine the type of a triangle based on side lengths.
@@ -61,6 +78,6 @@ if a==b or b==c or c==a:
 else:
     print("Scalene")
 
-if (a + b <=c) or (b+c <=a) or (a+c <=b):
+if (a + b <=c) or (b+c <=a) or (a+c <=b):#create if statement if 
     print("not a triangle")
 
