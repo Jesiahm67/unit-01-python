@@ -1,6 +1,6 @@
 num_one = float(input("Type a number: "))#create float variables for the first and second numbers
 num_two = float(input("Type a second number: "))
-print("1.Addidtion")
+print("1.Addidtion")#create prints to show what each number means as an operation
 print()
 print("2.Substraction")
 print()
@@ -30,7 +30,7 @@ if user == 3:
     print(num_one * num_two)
     
 if user == 4:
-    if num_two == 0:#create nested if statement if the denominater is 0 and giveds an error
+    if num_two == 0:#create nested if statement if either number is 0 and giveds an error
         print("Error")
     else:
         print(num_one/num_two)
@@ -41,13 +41,13 @@ if user == 5:
 if user == 6:
     
     if num_two == 0 or num_one == 0:
-        print("Error")
+        print("Error")#create nested if statement if either number is zero and gives an error
     else:
         print(num_one%num_two)
         
 if user == 7:
     if num_two == 0 or num_one == 0:
-        print("Error")
+        print("Error")#create nested if statement if either number is zero and gives an error
     else:
      print(num_one//num_two)
 
