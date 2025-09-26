@@ -26,8 +26,8 @@ print("Excercise 3:")
 sentance = "This is a sample sentance"#create sentence
 words = sentance.split()#create vairable to split sentance and length
 length = []
-for word in words:#create a for loop to say the lst
-    length.append(len(word))
+for word in words:#create a for loop to say the list
+    length.append(len(word))#add length for each word in numbers
 print("length:", length)
 """
 Excercise 4:
