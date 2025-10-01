@@ -1,4 +1,8 @@
-my_list = []
+with open("todos.txt") as file:
+    my_list = file.readlines()
+
+#replace with open
+
 print("Your current todo list is: ")#create print to start of the list
 print()
 while True:
@@ -20,3 +24,12 @@ while True:
         print()
         for x in my_list:#print the updated list
             print(x)
+    
+    if add == "exit":#create if statement if user chooses to exit
+        input = input("Are you sure that you want to exit: ") #create an input to confirm if the user chooses to exit
+        if input == "yes":
+            with open("todos.txt", "w") as file:#write the list in the todos.txt file
+                file.writelines(my_list)
+            break
+
+ 
