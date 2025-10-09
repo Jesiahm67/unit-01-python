@@ -16,20 +16,24 @@ Create a new directory called "test_folder" in the current directory.
 Then print a list of all files and directories in the current directory.
 """
 print("Task 2:")
+print()
+print()
 
-test_folder = "test_folder"#create a variable for the new folder
+# Create a new directory called 'test_folder' if it doesn't already exist
+os.makedirs('test_folder', exist_ok=True)
 
-if not os.path.exists(test_folder):#checks if the folder exists
-    os.mkdir(test_folder)
-    print(f"Directory '{test_folder}' created.")
-else:
-    print(f"Directory '{test_folder}' already exists.")
+# List all files and directories in the current directory
+items = os.listdir('.')
 
-list = os.listdir('.')#list all the files and directs in the test folder
-
-print("Files and directories in the current directory:")
-for item in list:#prints each item in the list
+# Print the list
+print("Files and directories in current directory:")
+for item in items:
     print(item)
+
+print()
+print()
+print()
+
 
 """
 Task 3 (os module):
@@ -38,16 +42,17 @@ working directory. If it doesn't exist, create it. If it does exist, print
 "Directory already exists."
 """
 print("Task 3:")
-directory_name = "data"#creates a vairbale for the directory name
-directory_path = os.getcwd()#create a variable for the directory path
-direct_path = os.path.join(directory_path, directory_name)#creates a vraible for direct path
-if not os.path.exists(direct_path):#checks if the directory exists
+print()
+print()
+# Define the directory name
+dir_name = "data"
+
+# Check if the directory exists
+if os.path.isdir(dir_name):
     print("Directory already exists.")
-
 else:
-    os.mkdir(direct_path)
-    print(f"Directory '{directory_name}' created at {direct_path}.")
-
+    os.makedirs(dir_name)
+    print(f"Directory '{dir_name}' created.")
 """
 Task 4 (os.path module):
 Write a program that checks if a file called "config.txt" exists in the current directory.
