@@ -10,7 +10,7 @@ print()
 for i in range(10):#create for loop to print numbers from 1 to 6 10 times on it's own
     dice = random.randint(1, 6)
     print()
-    print(f"Dice number is {dice}")
+    print(f"Dice number is {dice}")#prints the dic number
 """
 Task 2 (random module):
 Write a program that generates 5 random floating-point numbers between 0 and 1.
@@ -24,8 +24,8 @@ print()
 print()
 print("0-1")
 print()
-for i in range(5):
-    roll = random.uniform(0,1)
+for i in range(5):#creates a for loop for range
+    roll = random.uniform(0,1)#rolls between 0 and 1
     print()
     print(f"roll: {roll}")
     
@@ -33,7 +33,7 @@ print()#generate 5 random floating-point numbers between 10 and 20
 print("10-20")
 print()
 for i in range(5):
-    roll = random.uniform(10, 20)
+    roll = random.uniform(10, 20)#rolls between 10 and 29=0
     print()
     print(f"roll: {roll}")
 """
