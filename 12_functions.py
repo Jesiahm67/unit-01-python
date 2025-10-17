@@ -10,7 +10,7 @@ def my_func(name):
     """
     print("Hello " + name)
     
-my_func("James")
+my_func("James")#make the arguement in the function named james
 
 """
 Task 2: Square of a Number
@@ -23,7 +23,7 @@ def expon_num(n, d):
     """
     return n ** d
 
-x = expon_num(16, 4)
+x = expon_num(16, 4)#create the arguement for the function and make it 16 to the power of 4
 
 print(x)
 
@@ -38,12 +38,12 @@ def T_N(n):
     """
     Create a def boolean to see if the number is even it is considered true and if odd it turns false
     """
-    if n % 2 == 0:
+    if n % 2 == 0:#create a if statement to see if the number is even and an else statement if number is odd
         return True
     else:
         return False
     
-x = T_N(2)
+x = T_N(2)#create the arguement for the function and make it 2
 
 print(x)
         
@@ -58,7 +58,7 @@ def W_L_R(W, L):
     """
     return W * L
 
-x = W_L_R(4, 8)
+x = W_L_R(4, 8)#create the arguement for the function and make it 4 width and 8 length
 print(x)
 
 """
@@ -72,7 +72,7 @@ def F_C(C):
     """
     return C * 9/5 + 32
 
-x = F_C(14)
+x = F_C(14)#create the arguement for the funtion and make it 14 celsius
 print(x)
 """
 Task 6: Average of Numbers
@@ -84,7 +84,7 @@ def List(numbers):
     Create def function for a list of numbers
     """
     return sum(numbers) // len(numbers)
-x = List([14, 24, 39, 52, 63, 84])
+x = List([14, 24, 39, 52, 63, 84])#create the arguement for the function and make it a list of numbers
 print(x)
 
 """
@@ -95,10 +95,17 @@ and returns the total.
 Your function should also optionally accept a 3rd argument for discount as a float, 
 and return the discounted if provided.
 """
-def P_Q(n, r , discount=0.0):
-    t = n * r
+def P_Q(p, q , discount= 0.0 ):
+    """
+   Create a def function to make a equation for price and quantity with a discount option
+
+    """
+
+    t = p * q
     a = t * discount
-    f = t - a
-    return f
-x = P_Q(100.0, 5, 0.20)
+    final_amount = t - a
+    return final_amount
+x = P_Q(100.0, 5, 0.20)#create the arguement for the function and make the price 100, quantity 5, and discount 20%
 print(x)
+y = P_Q(100.0, 5)#create the arguement for the function and make the price 100 and quantity 5
+print(y)
