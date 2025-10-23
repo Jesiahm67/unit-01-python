@@ -14,11 +14,11 @@ The second def has hi(self so they can make sure the print say hi in the print f
 class Person:
     def __init__(self, name, age):
         self.name = name
-        str(self.age) = age
+        self.age = age
     
     
     def hi(self):
-        print("Hi my name is " + self.name + "")
+        print("Hi my name is " + self.name + " and your age is " + str(self.age))
 person = Person("Jesiah", 16)
 person.hi()
 """
@@ -106,3 +106,6 @@ if __name__ == "__main__":
     print(f"Account owner: {account2.owner}, Initial balance: ${account2.balance: .2f}")
     account2.deposit(750.0)
     account2.withdrawl(100.0)
+    
+    
+
