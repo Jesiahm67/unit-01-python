@@ -1,12 +1,18 @@
-temperature = 75
+"Exercise 1"
+temperature = 55
 
 if temperature > 80:
     print("It's hot")
+    
 elif temperature > 50:
     print("It's temperate")
+    
+elif temperature < 50 and temperature > 0:
+    print("It's a little cold")
+    
 elif temperature < 0:
     print("It's cold")
-"Exercise 1"
+"Exercise 2"
 
 text = "Hello, world, my name is"
 count = 0
@@ -16,7 +22,7 @@ for char in text:
        count += 1
 
 print(count)
-"Exercise 2"
+"Exercise 3"
 n = int(input("give me a number: "))
 
 for num in range(1, n):
@@ -25,7 +31,7 @@ for num in range(1, n):
     else:
         print(num, "is odd.")
 
-"Exercise 3"
+"Exercise 4"
 num = int(input("Enter an integer: "))
 
 if num < 0:#change -1 into 0
@@ -36,7 +42,7 @@ else:
     result *= i   
 
   print("Factorial of " + str(num) + " is " +  str(result))
-"Exercise 4"
+"Exercise 5"
 
 attempts = 0
 correct_password = "secret"
