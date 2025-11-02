@@ -102,5 +102,5 @@ def is_valid_email(email):
   """
   email_regex = r"^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,4})+"
   return re.match(email_regex, email) is not None
-assert is_valid_email("jramirez@gmail.com") == True #valid email
-assert is_valid_email("ban_homework456.gmail.com") == False #validate email
+assert is_valid_email("Jesiahm67@gmail.com") == True #valid email
+assert is_valid_email("ban_homework7189.gmail.com") == False #validate email

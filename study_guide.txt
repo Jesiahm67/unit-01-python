@@ -1,4 +1,5 @@
 print("Data types")
+
 """
 TASK 1:
 Create a float variable, and then convert it to an integer
@@ -115,9 +116,9 @@ print("Dash-separated subject:", dash_separated_subjects)
 
 
 
-
-
 print("Formatting")
+
+
 """
 TASK 1:
 Write code that checks if a user entered the correct password.
@@ -180,10 +181,12 @@ else:#create else statement if the second number is equal to zero
     print("Cannot divide by zero.")
     
     
-    
+
     
     
 print("List_blitz")
+
+
 """
 Task 1: Create a list
 Create a list with 4 elements and print it.
@@ -260,7 +263,10 @@ print(my_eighth_list)
 
 
 
+
 print("Conditionals")
+
+
 '''
 Exercise 1:
 Check if an integer is greater than 10.
@@ -343,8 +349,6 @@ else:
 
 if (a + b <=c) or (b+c <=a) or (a+c <=b):#create if statement if 
     print("not a triangle")
-
-
 
 
 
@@ -1340,6 +1344,103 @@ if __name__ == "__main__":
 
 print("Errors")
 
+"""
+Identify the potential errors in the following code snippets and modify 
+them to include appropriate try/except blocks to handle exceptions gracefully.
+"""
+
+
+"""
+Example 1: Division
+"""
+
+def divide_numbers(num1, num2):
+    try:
+       result = num1 / num2
+       print("Result:", result)
+    except:
+        print("Cannot divide by zero")#create except statement to catch division by zero error
+# Example usage:
+divide_numbers(10, 0)
+
+
+"""
+Example 2: Opening Files
+"""
+
+def read_file(filename):
+    try:
+        file = open(filename, 'r')
+    except:
+        print("No such thing as file")#create except statement to say file not found
+    try:
+        contents = file.read()
+    except:
+        print("Put variable at top")#create except statement to say variable file is found before assignment
+    try:
+        print("File contents:", contents)
+    except:
+        print("Put variable at top")#create except statement to say variable contents is found before assignment
+    try:
+        file.close()
+    except:
+        print("file is not defined")#create except statement to say variable file is not defined
+read_file("nonexistent.txt")
+"""
+
+Example 3: List Items
+"""
+
+def get_item(lst, index):
+    try:
+      item = lst[index]
+    except:
+        print("Variable not found")#create except statement to say variable item is not found
+    try:
+      print("Item:", item)
+    except:
+        print("Index error")#create except statement to say index is out of range
+
+# Example usage:
+my_list = [1, 2, 3]
+get_item(my_list, 5)
+
+"""
+Example 4: Dictionaries
+"""
+
+def get_value(dictionary, key):
+    try:
+        value = dictionary[key]
+    except:
+        print("Key error")#create except statement to say key is not found
+    try: 
+        print("Value:", value)
+    except:
+        print("Unbound error: variable before assignment")#create except statement to say variable value is not assigned
+
+# Example usage:
+my_dict = {"a": 1, "b": 2}
+get_value(my_dict, "c")
+"""
+Example 5: Else/Finally
+Modify the following code to include an else block to execute code if no exceptions occur 
+and a finally block to ensure that a certain action is always performed, regardless of whether an exception is raised.
+"""
+def process_file(filename):
+        try:#create try block to open file
+            with open(filename, 'r') as file:
+                contents = file.read()
+                print("File contents:", contents)
+                
+        except FileNotFoundError:
+            print("Error: File not found.")#create except statement to say file is not found
+        else:
+            print("File filed successfuly")#create else statement to say file opened successfully
+        finally:
+            print("File processing complete")#create finally statement to say file processing is complete
+# Example usage:
+process_file("example.txt")
 
 
 
@@ -1349,3 +1450,111 @@ print("Errors")
 
 
 print("trippy testing")
+
+
+"""
+Exercise 1: Divide
+"""
+def divide(a, b):
+  """Divides two numbers, handling potential division by zero.
+
+  Args:
+    a: The numerator.
+    b: The denominator.
+
+  Returns:
+    The quotient, or None if b is zero.
+  """
+
+  if b == 0:
+    return None
+  else:
+    return a / b
+  
+assert divide (10, 20) == 0.5
+assert divide (20, 4) == 5
+#Divides the two numbers
+
+"""
+Exercise 2: Factorial
+"""
+def factorial(n):
+  """Calculates the factorial of a non-negative integer.
+
+  Args:
+    n: A non-negative integer.
+
+  Returns:
+    The factorial of n.
+  """
+
+  if n == 0:
+    return 1
+  else:
+    return n * factorial(n - 1)
+assert factorial(4) == 24
+assert factorial(6) == 720
+
+"""
+Exercise 3: String Reverse
+"""
+def reverse_string(string):
+  """Reverses a given string.
+
+  Args:
+    string: A string to be reversed.
+
+  Returns:
+    The reversed string.
+  """
+
+  reversed_string = ""
+  for char in string:
+    reversed_string = char + reversed_string
+  return reversed_string
+
+assert reverse_string("A string to be reversed.") == ".desrever eb ot gnirts A"
+assert reverse_string("Hello.") == ".olleH"
+#reversed th string
+"""
+Exercise 4: Fibonacci
+"""
+def fibonacci(n):
+  """Generates the nth Fibonacci number.
+
+  Args:
+    n: The index of the Fibonacci number to calculate.
+
+  Returns:
+    The nth Fibonacci number.
+  """
+
+  if n <= 0:
+    return 0
+  elif n == 1:
+    return 1
+  else:
+    return fibonacci(n - 1) + fibonacci(n - 2)
+assert fibonacci(7) == 13
+assert fibonacci(4) == 3
+#fibonacci number
+
+"""
+Exercise 5: Email Validation
+"""
+
+import re
+
+def is_valid_email(email):
+  """Determines whether email is valid or not
+
+  Args:
+    email: The email to validate
+
+  Returns:
+    Boolean value if email is valid
+  """
+  email_regex = r"^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,4})+"
+  return re.match(email_regex, email) is not None
+assert is_valid_email("jramirez@gmail.com") == True #valid email
+assert is_valid_email("ban_homework456.gmail.com") == False #validate email
